@@ -1,7 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const ele = document.createElement("h1");
-  document.body.appendChild(ele);
+import React from "react";
+import ReactDOM from "react-dom";
 
-  ele.innerText= "learn webpack111";
-  ele.style.color = "red";
-})
+import App from "./components/App";
+
+ReactDOM.render(<App />, document.getElementById("root"));

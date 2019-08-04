@@ -1,5 +1,6 @@
 var webpack = require("webpack");
 var path = require("path");
+var HtmlWebpackPlugin = require("html-webpack-plugin");
 var DIST_PATH = path.resolve(__dirname, "../dist"); // 声明/dist的路径
 
 module.exports = {
@@ -16,11 +17,22 @@ module.exports = {
 
   // 模块解析
   module: {
-
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
+      }
+    ]
   },
 
   // 插件
   plugins: [
-
+    new HtmlWebpackPlugin({
+      filename: "index.html",
+      template: path.resolve(__dirname, "../src/index.html")
+    })
   ]
 }
