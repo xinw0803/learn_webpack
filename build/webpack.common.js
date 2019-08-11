@@ -16,7 +16,7 @@ module.exports = {
   },
   // 配置模块如何解析
   resolve: {
-    extensions: [".tsx", ".ts", ".js"],
+    extensions: [".tsx", ".ts", ".js", ".json"],
     // 创建别名
     alias: {
       "@src": path.resolve(__dirname, "../src")
@@ -27,7 +27,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.(ts|tsx)$/,
         exclude: /node_modules/, // 不解析node_modules
         loader: "ts-loader"
       },

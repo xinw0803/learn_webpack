@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --config ./build/webpack.prod.js --mode production",
     "dev": "webpack-dev-server --config ./build/webpack.dev.js --mode development --open",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tslint": "tslint --project . src/**/*.ts src/**/*.tsx"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,8 @@
     "babel-loader": "^8.0.6",
     "html-webpack-plugin": "^3.2.0",
     "ts-loader": "^6.0.4",
+    "tslint": "^5.18.0",
+    "tslint-loader": "^3.5.4",
     "typescript": "^3.5.3",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
