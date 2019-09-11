@@ -7,27 +7,31 @@ export interface IState {
   prevPropText: string | undefined;
 }
 
-export default class Container extends React.PureComponent<IProps, IState>{
+export default class Container extends React.PureComponent<IProps, IState> {
   constructor(props: IProps) {
     super(props);
     this.state = {
       text: props.initialText,
       prevPropText: props.initialText
-    }
+    };
   }
 
   static defaultProps = {
     initialText: "初始值"
-  }
+  };
 
   static getDerivedStateFromProps(nextProps: IProps, prevState: IState) {
-    console.log(nextProps.initialText, prevState.prevPropText, "Container getDerivedStateFromProps");
+    console.log(
+      nextProps.initialText,
+      prevState.prevPropText,
+      "Container getDerivedStateFromProps"
+    );
     if ("initialText" in nextProps) {
       if (nextProps.initialText !== prevState.prevPropText) {
         return {
           text: nextProps.initialText,
           prevPropText: nextProps.initialText
-        }
+        };
       }
     }
     return null;
@@ -49,8 +53,8 @@ export default class Container extends React.PureComponent<IProps, IState>{
   handleClick = () => {
     this.setState({
       text: "改变文字"
-    })
-  }
+    });
+  };
 
   render() {
     console.log("Container render");

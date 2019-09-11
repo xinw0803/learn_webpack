@@ -1,6 +1,6 @@
 import * as React from "react";
 import Container from "./Container";
-export interface IProps{ }
+export interface IProps {}
 
 export default class App extends React.Component<IProps, {}> {
   // constructor(props: IProps){
@@ -21,6 +21,6 @@ export default class App extends React.Component<IProps, {}> {
       <Container>
         <div>内容</div>
       </Container>
-    )
+    );
   }
 }
