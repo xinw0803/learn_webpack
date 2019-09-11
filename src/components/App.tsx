@@ -1,10 +1,26 @@
 import * as React from "react";
-interface IProps{ }
+import Container from "./Container";
+export interface IProps{ }
 
 export default class App extends React.Component<IProps, {}> {
+  // constructor(props: IProps){
+  //   super(props);
+  //   console.log("App constructor");
+  // }
+
+  // componentDidMount(){
+  //   console.log("App componentDidMount");
+  // }
+
+  // componentDidUpdate(){
+  //   console.log("App componentDidUpdate");
+  // }
+
   public render() {
     return (
-      <h1>Hello Webpack and React!!!</h1>
+      <Container>
+        <div>内容</div>
+      </Container>
     )
   }
 }
