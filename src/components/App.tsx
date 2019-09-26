@@ -56,7 +56,8 @@ export default class App extends React.Component<IProps, {}> {
   public render() {
     return (
       <Container>
-        <div>内容</div>
+        <h1>标题32131</h1>
+        <div>正文</div>
         <ComponentWithMouse />
       </Container>
     );
