@@ -44,7 +44,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "commitmsg": "commitlint -e $GIT_PARAMS"
     }
   },
   "lint-staged": {
@@ -53,6 +54,11 @@
       "prettier-check",
       "tslint -p tsconfig.json -c tslint.json",
       "git add"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
     ]
   }
 }
